@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -40,16 +38,34 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>SIFA</h1>
+            <h1>Smart-IFA Writer</h1>
           </div>
           <div className="header-subtitle">
-            <h2>input your fact find below, we'll write your email</h2>
+            <h2>input your fact find below, we'll generate your email</h2>
           </div>
         </div>
         <div className="prompt-container">
           <textarea 
             className="prompt-box"
-            placeholder="start typing here"
+            placeholder="
+              James - 45,
+              Wife: Kathy - 43,
+              
+              2 kids
+              • Max - 7,
+              • Rob - 5,
+
+              Property:
+              
+              Main residence - £850K,
+              Mortgage - £350K,
+              15 year term
+
+              Interest rate -
+                2.3%,
+              Monthly repayment
+              - £1,600 p/m
+            "
             value={userInput}
             onChange={onUserChangedText} 
           />
@@ -84,8 +100,7 @@ const Home = () => {
           rel="noreferrer"
         >
           <div className="badge">
-            <Image src={buildspaceLogo} />
-            <p>build by roshan & alan</p>
+            <p>&#9889; build by roshan & alan</p>
           </div>
         </a>
       </div>
